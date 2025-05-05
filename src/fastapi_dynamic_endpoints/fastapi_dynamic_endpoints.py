@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from fastapi.responses import JSONResponse
+import uvicorn
 
 app = FastAPI()
 
@@ -29,7 +30,12 @@ def remove_dynamic():
 
 
 def main():
-    pass
+    uvicorn.run(
+            "fastapi_dynamic_endpoints:app",
+            host="127.0.0.1",
+            port=8000,
+            reload=True
+        )
 
 
 if __name__ == "__main__":
