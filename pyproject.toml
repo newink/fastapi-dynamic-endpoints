@@ -31,13 +31,15 @@ classifiers = [
     "Programming Language :: Python :: 3.13",
     "Typing :: Typed",
     # Include this to avoid accidentally publishing to PyPI:
-    # "Private :: Do Not Upload",
+    "Private :: Do Not Upload",
 ]
 
 
 # ---- Main dependencies ----
 
 dependencies = [
+    "fastapi>=0.115.12",
+    "uvicorn>=0.34.2",
 ]
 
 
